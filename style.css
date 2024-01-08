@@ -19,11 +19,21 @@ p, ul {
     color: honeydew;
 }
 
-h1, h2, b {
+h1, h2, b, a {
     font-family: "Trebuchet MS";
     color: lightgreen;
 }
 
-img {
+.main-image {
     border-radius: 1rem;
+}
+
+a:hover {
+    font-family: "Trebuchet MS";
+    color: aqua;
+    text-underline: auto;
+}
+
+td {
+    padding: 0.5rem;
 }
