@@ -1,2 +1,2 @@
 # personal-website
-Personal website showcasing my projects, experience, and interests.
+Personal website showcasing my projects, interests, and other things about myself.
