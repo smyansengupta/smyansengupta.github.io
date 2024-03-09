@@ -1,60 +1,64 @@
 body {
-    background-color: honeydew;
-    margin: 0;
+  background-color: honeydew;
+  margin: 0;
 }
 
 div {
-    width: auto;
+  width: auto;
 }
 
 .main-div {
-    background-color: darkslategray;
-    width: auto;
-    margin: 1rem 1rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-style: solid;
-    border-color: black;
-    border-width: 4px;
-    border-radius: 0.5rem;
+  background-color: darkslategray;
+  width: auto;
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 0.5rem;
 }
 
 .flex-div {
-    display: flex
+  display: flex;
 }
 
-p, ul {
-    font-family: "Trebuchet MS";
-    color: honeydew;
+p,
+ul {
+  font-family: 'Trebuchet MS';
+  color: honeydew;
 }
 
-h1, h2, b, a {
-    font-family: "Trebuchet MS";
-    color: lightgreen;
+h1,
+h2,
+b,
+a {
+  font-family: 'Trebuchet MS';
+  color: lightgreen;
 }
 
 .main-image {
-    margin: 1rem 1rem;
-    border-style: solid;
-    border-color: black;
-    border-width: 4px;
-    border-radius: 0.5rem;
+  margin: 1rem 1rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 0.5rem;
 }
 
 .icon {
-    transition: transform 0.3s ease;
-    color: lightgreen;
+  transition: transform 0.3s ease;
+  color: lightgreen;
 }
 
 .icon:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 a:hover {
-    font-family: "Trebuchet MS";
-    color: aqua;
-    text-underline: auto;
+  font-family: 'Trebuchet MS';
+  color: aqua;
+  text-underline: auto;
 }
 
 td {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
