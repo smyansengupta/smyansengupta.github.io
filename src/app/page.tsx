@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -24,11 +26,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="hero-title">
-                <a href="#"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="100px" alt="GIF"></img></a>
-                Hi, I'm Smyan
+                Hi, I&apos;m Smyan
               </h1>
               <p className="hero-subtitle">
-                I'm a 3rd year Computer Science student at{" "}
+                I&apos;m a 3rd year Computer Science student at{" "}
                 <a 
                   href="https://www.northeastern.edu/" 
                   className="text-white hover:text-gray-300 transition-colors"
@@ -42,9 +43,11 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img 
+                <Image 
                   src="/pfp.jpeg" 
                   alt="Smyan Sengupta" 
+                  width={256}
+                  height={256}
                   className="w-64 h-64 profile-picture rounded-full object-cover shadow-2xl"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 status-indicator rounded-full"></div>
@@ -300,7 +303,7 @@ export default function Home() {
           <h2 className="section-title">Contact</h2>
           <div className="space-y-4">
             <p className="text-gray-400">
-              Feel free to reach out if you'd like to connect or collaborate.
+              Feel free to reach out if you&apos;d like to connect or collaborate.
             </p>
             <div>
               <a href="mailto:senguptasmyan@gmail.com" className="contact-link">
