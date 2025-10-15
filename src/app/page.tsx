@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a href="#" className="text-xl font-semibold">
-              smyansengupta
+              Smyan Sengupta
             </a>
             <div className="flex space-x-8">
               <a href="#experience" className="nav-link">Experience</a>
@@ -183,8 +183,8 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">OpenRouter</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Devpost →</a>
+                <a href="https://github.com/smyansengupta/guardrails-atomic" className="project-link">GitHub →</a>
+                <a href="https://devpost.com/software/ai-llm-chatgpt-blockchain-machine-learning" className="project-link">Devpost →</a>
               </div>
             </div>
             
@@ -200,8 +200,7 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Machine Learning</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Paper →</a>
+                <a href="https://github.com/sandeepsalwan1/ClaimCheckerModels" className="project-link">GitHub →</a>
               </div>
             </div>
 
@@ -221,8 +220,8 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">OpenAI API</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Live Demo →</a>
+                <a href="https://github.com/ryankamiri/OpenLegislation" className="project-link">GitHub →</a>
+                <a href="https://devpost.com/software/openlegislation" className="project-link">Devpost →</a>
               </div>
             </div>
 
@@ -239,8 +238,8 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Gemini API</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Demo →</a>
+                <a href="https://github.com/KooshaPari/hoohacks" className="project-link">GitHub →</a>
+                <a href="https://devpost.com/software/healthsync-vrdtb3" className="project-link">Devpost →</a>
               </div>
             </div>
 
@@ -256,8 +255,8 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Gemini API</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Demo →</a>
+                <a href="https://github.com/SecondSightapp/mobile" className="project-link">GitHub →</a>
+                <a href="https://www.youtube.com/watch?v=C807C74Hv2k" className="project-link">Demo →</a>
               </div>
             </div>
 
@@ -291,8 +290,8 @@ export default function Home() {
                 <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Alpha Vantage API</span>
               </div>
               <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Demo →</a>
+                <a href="https://github.com/shawnmalik1/HooWantsADegree" className="project-link">GitHub →</a>
+                <a href="https://devpost.com/software/hoo-wants-a-degree" className="project-link">Devpost →</a>
               </div>
             </div>
           </div>
