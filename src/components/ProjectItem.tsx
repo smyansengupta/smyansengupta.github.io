@@ -23,7 +23,7 @@ export default function ProjectItem({
       <div className="flex items-center justify-between mb-2">
         <h3 className="project-title">{title}</h3>
         {achievement && (
-          <span className="text-xs bg-green-900 text-green-300 px-2 py-1 rounded">
+          <span className="text-xs bg-green-900 text-green-300 px-2 py-1 rounded project-achievement-badge">
             {achievement}
           </span>
         )}

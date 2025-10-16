@@ -1,35 +1,26 @@
 import Image from "next/image";
 import ExperienceItem from "@/components/ExperienceItem";
 import ProjectItem from "@/components/ProjectItem";
+import ToolsSection from "@/components/ToolsSection";
+import BackToTopButton from "@/components/BackToTopButton";
+import ScrollDownButton from "@/components/ScrollDownButton";
+import ContactForm from "@/components/ContactForm";
+import MobileNavigation from "@/components/MobileNavigation";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <a href="#" className="text-xl font-semibold">
-              Smyan Sengupta
-            </a>
-            <div className="flex space-x-8">
-              <a href="#experience" className="nav-link">Experience</a>
-              <a href="#projects" className="nav-link">Projects</a>
-              <a href="#tools" className="nav-link">Tools</a>
-              <a href="#contact" className="nav-link">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <MobileNavigation />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 pt-24">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="min-h-[calc(100vh-6rem)] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="hero-title">
-                Hi, I&apos;m Smyan
+                Hi, I&apos;m <span style={{ color: '#3b82f6' }}>Smyan</span>
               </h1>
               <p className="hero-subtitle">
                 I&apos;m a 3rd year Computer Science student at{" "}
@@ -43,6 +34,7 @@ export default function Home() {
                 </a>
                 , passionate about building software and solving problems.
               </p>
+              {/* Removed in-hero anchor; replaced by floating button */}
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
@@ -128,6 +120,8 @@ export default function Home() {
           </div>
         </section>
 
+        <ToolsSection />
+
         {/* Projects Section */}
         <section id="projects" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Projects</h2>
@@ -148,7 +142,8 @@ export default function Home() {
               description="Developed and trained a fact-checker AI model to determine the amount of misinformation in news articles. Utilized Bayesian Inference with Hamiltonian Monte Carlo sampling to calculate probabilities of misinformation."
               technologies={["Python", "Bayesian Inference", "Machine Learning"]}
               links={[
-                { label: "GitHub", url: "https://github.com/sandeepsalwan1/ClaimCheckerModels" }
+                { label: "Code available upon request", url: "#contact" },
+                { label: "Paper", url: "/ClaimCheckerAiReport.pdf" }
               ]}
             />
 
@@ -188,8 +183,8 @@ export default function Home() {
               description="Developed a degree planner web application to aid University of Virginia School of Engineering students in creating AI-generated four-year degree plans."
               technologies={["React", "Perplexity AI API"]}
               links={[
-                { label: "GitHub", url: "#" },
-                { label: "Live Demo", url: "#" }
+                { label: "GitHub", url: "https://github.com/shawnmalik1/HooWantsADegree" },
+                { label: "Devpost", url: "https://devpost.com/software/hoo-wants-a-degree" }
               ]}
             />
 
@@ -198,199 +193,20 @@ export default function Home() {
               description="Developed a full-stack Java application using MVC architecture for users to create, update, and maintain stock portfolios. Incorporated algorithms to calculate stock gain/loss, moving averages, and portfolio rebalancing with real-time data for 1000+ stocks."
               technologies={["Java", "RESTful APIs", "MVC Architecture", "Swing", "Alpha Vantage API"]}
               links={[
-                { label: "GitHub", url: "https://github.com/shawnmalik1/HooWantsADegree" },
-                { label: "Devpost", url: "https://devpost.com/software/hoo-wants-a-degree" }
+                { label: "Code available upon request", url: "#contact" }
               ]}
             />
-          </div>
-        </section>
-
-        <section id="tools" className="py-16 border-t border-gray-800">
-        <div className="marquee-container">
-            <h2 className="marquee-title">Tools I Use</h2>
-            <div className="marquee">
-                <div className="marquee-content">
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    {/* Duplicate set for seamless loop */}
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" className="marquee-logo" width={24} height={24} />
-                    </div>
-              </div>
-            </div>
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Contact</h2>
-          <div className="space-y-4">
-            <p className="text-gray-400">
-              Feel free to reach out if you&apos;d like to connect or collaborate.
+          <div className="max-w-2xl mx-auto">
+            <p className="text-gray-400 text-center mb-8">
+              Feel free to reach out if you&apos;d like to connect or collaborate!
             </p>
-            <div>
-              <a href="mailto:senguptasmyan@gmail.com" className="contact-link">
-                senguptasmyan@gmail.com
-              </a>
-              <a 
-                href="https://github.com/smyansengupta" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="contact-link"
-              >
-                GitHub
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/smyan-sengupta-66871b237/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="contact-link"
-              >
-                LinkedIn
-              </a>
-            </div>
+            <ContactForm />
           </div>
         </section>
       </main>
@@ -398,11 +214,55 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-800 mt-20">
         <div className="max-w-4xl mx-auto px-6 py-8">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Smyan Sengupta
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {new Date().getFullYear()} Smyan Sengupta. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6">
+              <a 
+                href="/resume.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                aria-label="Resume"
+              >
+                Resume
+              </a>
+              <a 
+                href="https://github.com/smyansengupta" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Image 
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+                  alt="GitHub" 
+                  width={24} 
+                  height={24}
+                  style={{filter: 'brightness(0) invert(1)'}}
+                />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/smyan-sengupta-66871b237/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Image 
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+                  alt="LinkedIn" 
+                  width={24} 
+                  height={24}
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
+      <BackToTopButton />
+      <ScrollDownButton />
     </div>
   );
 }
