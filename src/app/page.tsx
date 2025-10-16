@@ -223,7 +223,7 @@ export default function Home() {
                 href="/resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-medium text-white hover:bg-white/8 hover:scale-105 hover:-translate-y-0.5 transition-all duration-200 shadow-lg hover:shadow-xl"
                 aria-label="Resume"
               >
                 Resume
@@ -232,7 +232,7 @@ export default function Home() {
                 href="https://github.com/smyansengupta" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="inline-flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/8 hover:scale-105 hover:-translate-y-0.5 transition-all duration-200 shadow-lg hover:shadow-xl"
                 aria-label="GitHub"
               >
                 <Image 
@@ -247,7 +247,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/smyan-sengupta-66871b237/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="inline-flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/8 hover:scale-105 hover:-translate-y-0.5 transition-all duration-200 shadow-lg hover:shadow-xl"
                 aria-label="LinkedIn"
               >
                 <Image 
