@@ -271,9 +271,6 @@ export default function Home() {
                       <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="marquee-logo" width={24} height={24} />
                     </div>
                     <div className="marquee-item">
-                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="marquee-logo" width={24} height={24} />
-                    </div>
-                    <div className="marquee-item">
                       <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="marquee-logo" width={24} height={24} />
                     </div>
                     <div className="marquee-item">
