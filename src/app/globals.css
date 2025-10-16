@@ -52,15 +52,18 @@ body {
 
 .project-card {
   border: 1px solid #222;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1.5rem;
   transition: all 0.2s ease;
   background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .project-card:hover {
   border-color: #333;
   background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
 .project-title {
@@ -210,5 +213,77 @@ body {
   .profile-picture {
     width: 12rem;
     height: 12rem;
+  }
+}
+
+.marquee-container {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 40px 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 80px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid #222;
+  transition: all 0.2s ease;
+}
+
+.marquee-container:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: #333;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.marquee-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee-item:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.marquee-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
   }
 }

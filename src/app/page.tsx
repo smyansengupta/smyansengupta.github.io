@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ExperienceItem from "@/components/ExperienceItem";
+import ProjectItem from "@/components/ProjectItem";
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
             <div className="flex space-x-8">
               <a href="#experience" className="nav-link">Experience</a>
               <a href="#projects" className="nav-link">Projects</a>
+              <a href="#tools" className="nav-link">Tools</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
           </div>
@@ -64,100 +67,63 @@ export default function Home() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-700"></div>
             
             <div className="space-y-12">
-              {/* Experience 1 */}
-              <div className="relative flex items-start space-x-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-gray-700">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                    <div className="flex items-center space-x-2 mb-1 md:mb-0">
-                      <h3 className="text-xl font-semibold">Machine Learning and Data Analysis Co-op</h3>
-                      <span className="text-sm text-gray-400">(MSAT Modeling)</span>
-                    </div>
-                    <div className="text-sm text-gray-400 font-medium">July 2025 - Present</div>
-                  </div>
-                  <div className="text-gray-400 mb-3">Pfizer • Andover, MA</div>
-                  <ul className="space-y-1 text-gray-300">
-                    <li>• Performing data analysis on lab datasets for an $11 billion project using XGBoost, Random Forest, Scikit-learn Gradient Boosting, and Support Vector Regression</li>
-                    <li>• Executing and automating extensive data cleaning, organization, and analysis processes</li>
-                    <li>• Engineering a spaCy-based chatbot to provide automated insights on experimental data and process documentation</li>
-                  </ul>
-                </div>
-              </div>
+              <ExperienceItem
+                title="Machine Learning and Data Analysis Co-op"
+                subtitle="MSAT Modeling"
+                company="Pfizer"
+                location="Andover, MA"
+                duration="July 2025 - Present"
+                responsibilities={[
+                  "Performing data analysis on lab datasets for an $11 billion project using XGBoost, Random Forest, Scikit-learn Gradient Boosting, and Support Vector Regression",
+                  "Executing and automating extensive data cleaning, organization, and analysis processes",
+                  "Engineering a spaCy-based chatbot to provide automated insights on experimental data and process documentation"
+                ]}
+              />
 
-              {/* Experience 2 */}
-              <div className="relative flex items-start space-x-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-gray-700">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold mb-1 md:mb-0">Co-Founder and Vice President</h3>
-                    <div className="text-sm text-gray-400 font-medium">May 2025 - Present</div>
-                  </div>
-                  <div className="text-gray-400 mb-3">MedCS Lab • Boston, MA</div>
-                  <ul className="space-y-1 text-gray-300">
-                    <li>• Leading the initiative to establish an interdisciplinary undergraduate research group at the intersection of computer science/data science and medical fields</li>
-                    <li>• Managing communication platforms (Discord, Notion) and facilitating coordination between members and advisors</li>
-                  </ul>
-                </div>
-              </div>
+              <ExperienceItem
+                title="Co-Founder and Vice President"
+                company="MedCS Lab"
+                location="Boston, MA"
+                duration="May 2025 - Present"
+                responsibilities={[
+                  "Leading the initiative to establish an interdisciplinary undergraduate research group at the intersection of computer science/data science and medical fields",
+                  "Managing communication platforms (Discord, Notion) and facilitating coordination between members and advisors"
+                ]}
+              />
 
-              {/* Experience 3 */}
-              <div className="relative flex items-start space-x-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-gray-700">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold mb-1 md:mb-0">Founding Member and Hackathon Head</h3>
-                    <div className="text-sm text-gray-400 font-medium">August 2025 - Present</div>
-                  </div>
-                  <div className="text-gray-400 mb-3">Northeastern Claude Builder Club • Boston, MA</div>
-                  <ul className="space-y-1 text-gray-300">
-                    <li>• Spearheading the planning and execution of a 24-hour competitive programming event</li>
-                    <li>• Managing budgeting and sponsorship coordination</li>
-                  </ul>
-                </div>
-              </div>
+              <ExperienceItem
+                title="Founding Member and Hackathon Head"
+                company="Northeastern Claude Builder Club"
+                location="Boston, MA"
+                duration="August 2025 - Present"
+                responsibilities={[
+                  "Spearheading the planning and execution of a 24-hour competitive programming event",
+                  "Managing budgeting and sponsorship coordination"
+                ]}
+              />
 
-              {/* Experience 4 */}
-              <div className="relative flex items-start space-x-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-gray-700">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold mb-1 md:mb-0">Founding Member and Treasurer</h3>
-                    <div className="text-sm text-gray-400 font-medium">September 2024 - Present</div>
-                  </div>
-                  <div className="text-gray-400 mb-3">Northeastern Association for Computing Machinery • Boston, MA</div>
-                  <ul className="space-y-1 text-gray-300">
-                    <li>• Managing all finances, fund disbursements, and meeting requirements</li>
-                    <li>• Organizing meetings, mixers, and collaborative events with other clubs</li>
-                    <li>• Coordinating with professors for speaking engagements</li>
-                  </ul>
-                </div>
-              </div>
+              <ExperienceItem
+                title="Founding Member and Treasurer"
+                company="Northeastern Association for Computing Machinery"
+                location="Boston, MA"
+                duration="September 2024 - Present"
+                responsibilities={[
+                  "Managing all finances, fund disbursements, and meeting requirements",
+                  "Organizing meetings, mixers, and collaborative events with other clubs",
+                  "Coordinating with professors for speaking engagements"
+                ]}
+              />
 
-              {/* Experience 5 */}
-              <div className="relative flex items-start space-x-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center border-2 border-gray-700">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold mb-1 md:mb-0">Teaching Assistant – Foundations of Data Science</h3>
-                    <div className="text-sm text-gray-400 font-medium">September 2024 - April 2025</div>
-                  </div>
-                  <div className="text-gray-400 mb-3">Khoury College of Computer Sciences • Boston, MA</div>
-                  <ul className="space-y-1 text-gray-300">
-                    <li>• Facilitating 6+ office hours per week, leading project meetings, and proctoring labs/exams</li>
-                    <li>• Grading 90+ assignments per week and providing useful feedback on data analysis, linear algebra, statistics, and machine learning concepts</li>
-                  </ul>
-                </div>
-              </div>
+              <ExperienceItem
+                title="Teaching Assistant – Foundations of Data Science"
+                company="Khoury College of Computer Sciences"
+                location="Boston, MA"
+                duration="September 2024 - April 2025"
+                responsibilities={[
+                  "Facilitating 6+ office hours per week, leading project meetings, and proctoring labs/exams",
+                  "Grading 90+ assignments per week and providing useful feedback on data analysis, linear algebra, statistics, and machine learning concepts"
+                ]}
+              />
             </div>
           </div>
         </section>
@@ -166,132 +132,235 @@ export default function Home() {
         <section id="projects" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Projects</h2>
           <div className="space-y-6">
-            <div className="project-card">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="project-title">Guardrails: Atomic</h3>
-                <span className="text-xs bg-green-900 text-green-300 px-2 py-1 rounded">1st Place ALIHacks 2025</span>
-              </div>
-              <p className="project-description mb-3">
-                Built an AI-powered formal verification platform that generates mathematically verified code from natural language inputs. 
-                Engineered a YAML-to-Z3 conversion pipeline with automated counterexample generation for program verification.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">TypeScript</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Next.js</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Z3 Theorem Prover</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MongoDB</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">OpenRouter</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/smyansengupta/guardrails-atomic" className="project-link">GitHub →</a>
-                <a href="https://devpost.com/software/ai-llm-chatgpt-blockchain-machine-learning" className="project-link">Devpost →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="Guardrails: Atomic"
+              description="Built an AI-powered formal verification platform that generates mathematically verified code from natural language inputs. Engineered a YAML-to-Z3 conversion pipeline with automated counterexample generation for program verification."
+              technologies={["TypeScript", "Next.js", "Z3 Theorem Prover", "MongoDB", "OpenRouter"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/smyansengupta/guardrails-atomic" },
+                { label: "Devpost", url: "https://devpost.com/software/ai-llm-chatgpt-blockchain-machine-learning" }
+              ]}
+              achievement="1st Place ALIHacks 2025"
+            />
             
-            <div className="project-card">
-              <h3 className="project-title">NewsFactChecker</h3>
-              <p className="project-description mb-3">
-                Developed and trained a fact-checker AI model to determine the amount of misinformation in news articles. 
-                Utilized Bayesian Inference with Hamiltonian Monte Carlo sampling to calculate probabilities of misinformation.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Python</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Bayesian Inference</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Machine Learning</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/sandeepsalwan1/ClaimCheckerModels" className="project-link">GitHub →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="NewsFactChecker"
+              description="Developed and trained a fact-checker AI model to determine the amount of misinformation in news articles. Utilized Bayesian Inference with Hamiltonian Monte Carlo sampling to calculate probabilities of misinformation."
+              technologies={["Python", "Bayesian Inference", "Machine Learning"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/sandeepsalwan1/ClaimCheckerModels" }
+              ]}
+            />
 
-            <div className="project-card">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="project-title">OpenLegislation</h3>
-                <span className="text-xs bg-green-900 text-green-300 px-2 py-1 rounded">1st Place HackHarvard 2024 - Open Data Track</span>
-              </div>
-              <p className="project-description mb-3">
-                Developed a web application to make current Congress bills more accessible and understandable for common users, 
-                using the OpenAI API for vector search and simplification.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">React</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">TailwindCSS</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Congress.gov API</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">OpenAI API</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/ryankamiri/OpenLegislation" className="project-link">GitHub →</a>
-                <a href="https://devpost.com/software/openlegislation" className="project-link">Devpost →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="OpenLegislation"
+              description="Developed a web application to make current Congress bills more accessible and understandable for common users, using the OpenAI API for vector search and simplification."
+              technologies={["React", "TailwindCSS", "Congress.gov API", "OpenAI API"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/ryankamiri/OpenLegislation" },
+                { label: "Devpost", url: "https://devpost.com/software/openlegislation" }
+              ]}
+              achievement="1st Place HackHarvard 2024 - Open Data Track"
+            />
 
-            <div className="project-card">
-              <h3 className="project-title">HealthSync</h3>
-              <p className="project-description mb-3">
-                Developed a mobile application that analyzes user health data and health-related journal entries to provide users with 
-                AI-powered health analysis and recommendations.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Flutter</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Python</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MongoDB Atlas</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Gemini API</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/KooshaPari/hoohacks" className="project-link">GitHub →</a>
-                <a href="https://devpost.com/software/healthsync-vrdtb3" className="project-link">Devpost →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="HealthSync"
+              description="Developed a mobile application that analyzes user health data and health-related journal entries to provide users with AI-powered health analysis and recommendations."
+              technologies={["Flutter", "Python", "MongoDB Atlas", "Gemini API"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/KooshaPari/hoohacks" },
+                { label: "Devpost", url: "https://devpost.com/software/healthsync-vrdtb3" }
+              ]}
+            />
 
-            <div className="project-card">
-              <h3 className="project-title">Second Sight</h3>
-              <p className="project-description mb-3">
-                Developed an AI-powered journaling application where users can log their mood for the day, create journal entries, and view 
-                entries over time. Leveraged Gemini AI to analyze entries and mood trends to assist users in understanding themselves better.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Flutter</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Kotlin</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Gemini API</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/SecondSightapp/mobile" className="project-link">GitHub →</a>
-                <a href="https://www.youtube.com/watch?v=C807C74Hv2k" className="project-link">Demo →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="Second Sight"
+              description="Developed an AI-powered journaling application where users can log their mood for the day, create journal entries, and view entries over time. Leveraged Gemini AI to analyze entries and mood trends to assist users in understanding themselves better."
+              technologies={["Flutter", "Kotlin", "Gemini API"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/SecondSightapp/mobile" },
+                { label: "Demo", url: "https://www.youtube.com/watch?v=C807C74Hv2k" }
+              ]}
+            />
 
-            <div className="project-card">
-              <h3 className="project-title">Hoo Wants A Degree</h3>
-              <p className="project-description mb-3">
-                Developed a degree planner web application to aid University of Virginia School of Engineering students in creating 
-                AI-generated four-year degree plans.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">React</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Perplexity AI API</span>
-              </div>
-              <div className="project-links">
-                <a href="#" className="project-link">GitHub →</a>
-                <a href="#" className="project-link">Live Demo →</a>
-              </div>
-            </div>
+            <ProjectItem
+              title="Hoo Wants A Degree"
+              description="Developed a degree planner web application to aid University of Virginia School of Engineering students in creating AI-generated four-year degree plans."
+              technologies={["React", "Perplexity AI API"]}
+              links={[
+                { label: "GitHub", url: "#" },
+                { label: "Live Demo", url: "#" }
+              ]}
+            />
 
-            <div className="project-card">
-              <h3 className="project-title">Stocks Simulator</h3>
-              <p className="project-description mb-3">
-                Developed a full-stack Java application using MVC architecture for users to create, update, and maintain stock portfolios. 
-                Incorporated algorithms to calculate stock gain/loss, moving averages, and portfolio rebalancing with real-time data for 1000+ stocks.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Java</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">RESTful APIs</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MVC Architecture</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Swing</span>
-                <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Alpha Vantage API</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/shawnmalik1/HooWantsADegree" className="project-link">GitHub →</a>
-                <a href="https://devpost.com/software/hoo-wants-a-degree" className="project-link">Devpost →</a>
+            <ProjectItem
+              title="Stocks Simulator"
+              description="Developed a full-stack Java application using MVC architecture for users to create, update, and maintain stock portfolios. Incorporated algorithms to calculate stock gain/loss, moving averages, and portfolio rebalancing with real-time data for 1000+ stocks."
+              technologies={["Java", "RESTful APIs", "MVC Architecture", "Swing", "Alpha Vantage API"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/shawnmalik1/HooWantsADegree" },
+                { label: "Devpost", url: "https://devpost.com/software/hoo-wants-a-degree" }
+              ]}
+            />
+          </div>
+        </section>
+
+        <section id="tools" className="py-16 border-t border-gray-800">
+        <div className="marquee-container">
+            <h2 className="marquee-title">Tools I Use</h2>
+            <div className="marquee">
+                <div className="marquee-content">
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    {/* Duplicate set for seamless loop */}
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="marquee-logo" width={24} height={24} style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="marquee-logo" width={24} height={24} />
+                    </div>
+                    <div className="marquee-item">
+                      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" className="marquee-logo" width={24} height={24} />
+                    </div>
               </div>
             </div>
           </div>
