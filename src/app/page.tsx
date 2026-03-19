@@ -60,49 +60,15 @@ export default function Home() {
             
             <div className="space-y-12">
               <ExperienceItem
-                title="Machine Learning and Data Analysis Co-op"
-                subtitle="MSAT Modeling"
+                title="Machine Learning Engineering Co-op"
                 company="Pfizer"
                 location="Andover, MA"
-                duration="July 2025 - Present"
+                duration="July - December 2025"
                 responsibilities={[
-                  "Performing data analysis on lab datasets for an $11 billion project using XGBoost, Random Forest, Scikit-learn Gradient Boosting, and Support Vector Regression",
-                  "Executing and automating extensive data cleaning, organization, and analysis processes",
-                  "Engineering a spaCy-based chatbot to provide automated insights on experimental data and process documentation"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Co-Founder and Vice President"
-                company="MedCS Lab"
-                location="Boston, MA"
-                duration="May 2025 - Present"
-                responsibilities={[
-                  "Leading the initiative to establish an interdisciplinary undergraduate research group at the intersection of computer science/data science and medical fields",
-                  "Managing communication platforms (Discord, Notion) and facilitating coordination between members and advisors"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Founding Member and Hackathon Head"
-                company="Northeastern Claude Builder Club"
-                location="Boston, MA"
-                duration="August 2025 - Present"
-                responsibilities={[
-                  "Spearheading the planning and execution of a 24-hour competitive programming event",
-                  "Managing budgeting and sponsorship coordination"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Founding Member and Treasurer"
-                company="Northeastern Association for Computing Machinery"
-                location="Boston, MA"
-                duration="September 2024 - Present"
-                responsibilities={[
-                  "Managing all finances, fund disbursements, and meeting requirements",
-                  "Organizing meetings, mixers, and collaborative events with other clubs",
-                  "Coordinating with professors for speaking engagements"
+                  "Engineered a spaCy-based Natural Language Processing (NLP) chat assistant with a custom Named Entity Recognition (NER) pipeline from scratch, providing automated insights on experimental data, process documentation, and model optimization strategies for workflows across 5 distinct manufacturing processes",
+                  "Developed, automated, and deployed a data cleaning and predictive modeling pipeline using XGBoost, Random Forest, and SVR on 9+ time-series lab datasets (1,000+ datapoints each) for an $11 billion polysaccharide data analysis project",
+                  "Implemented SHAP explainability analysis and EconML causal inference to identify highest-impact factors across datasets, ensuring model interpretability and consistency",
+                  "Researched and implemented MLflow experiment tracking and Data Version Control (DVC) for reproducible ML workflows; presented proof-of-concept to modeling teams across 4 sites"
                 ]}
               />
 
@@ -112,8 +78,40 @@ export default function Home() {
                 location="Boston, MA"
                 duration="September 2024 - April 2025"
                 responsibilities={[
-                  "Facilitating 6+ office hours per week, leading project meetings, and proctoring labs/exams",
-                  "Grading 90+ assignments per week and providing useful feedback on data analysis, linear algebra, statistics, and machine learning concepts"
+                  "Facilitated 6+ office hours per week, directed project meetings, and proctored labs/exams to assist students with assignments and aid them in understanding data analysis, linear algebra, statistics, and machine learning concepts",
+                  "Graded 90+ assignments per week, providing useful feedback"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Director of Operations"
+                company="Northeastern Claude Builder Club"
+                location="Boston, MA"
+                duration="August 2025 - Present"
+                responsibilities={[
+                  "Secured Anthropic as a sponsor for two large-scale 24-hour hackathons, negotiated Claude API credit allocations for winners",
+                  "Coordinated demos and workshops with Claude Student Ambassadors and student developers to drive adoption and showcase capabilities across the Northeastern developer community"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Founding Member and Vice Chair"
+                company="Northeastern Association for Computing Machinery"
+                location="Boston, MA"
+                duration="September 2024 - Present"
+                responsibilities={[
+                  "Directed the planning and execution of two large-scale 24-hour hackathons with 40+ attendees, coordinating budgeting, sponsorships, judging, workshops, and cross-club collaborations across 6+ student organizations and 3 local startups",
+                  "Facilitated communications between student software engineers and local startups to develop impactful real-world products"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Co-Founder and Vice President"
+                company="MedCS Lab"
+                location="Boston, MA"
+                duration="May 2025 - Present"
+                responsibilities={[
+                  "Spearheaded an initiative to establish an interdisciplinary undergraduate research group focused on the intersection of computer science, data science, and the life sciences, facilitating communication between members and advisors"
                 ]}
               />
             </div>
@@ -127,20 +125,9 @@ export default function Home() {
           <h2 className="section-title">Projects</h2>
           <div className="space-y-6">
             <ProjectItem
-              title="Guardrails: Atomic"
-              description="Built an AI-powered formal verification platform that generates mathematically verified code from natural language inputs. Engineered a YAML-to-Z3 conversion pipeline with automated counterexample generation for program verification."
-              technologies={["TypeScript", "Next.js", "Z3 Theorem Prover", "MongoDB", "OpenRouter"]}
-              links={[
-                { label: "GitHub", url: "https://github.com/smyansengupta/guardrails-atomic" },
-                { label: "Devpost", url: "https://devpost.com/software/ai-llm-chatgpt-blockchain-machine-learning" }
-              ]}
-              achievement="1st Place ALIHacks 2025"
-            />
-            
-            <ProjectItem
               title="NewsFactChecker"
-              description="Developed and trained a fact-checker AI model to determine the amount of misinformation in news articles. Utilized Bayesian Inference with Hamiltonian Monte Carlo sampling to calculate probabilities of misinformation."
-              technologies={["Python", "Bayesian Inference", "Machine Learning"]}
+              description="Designed a probabilistic NLP fact-checking model on 10K+ statements from the LIAR dataset using a 6-class Bayesian softmax classifier, applying Hamiltonian Monte Carlo with JAX to sample 5,000 posterior weight estimates. Implemented semantic feature extraction using SentenceTransformer embeddings; benchmarked posterior-averaged credibility scores against logistic regression baselines using AUC and threshold-optimized F1."
+              technologies={["Python", "JAX", "NumPy", "Scikit-learn", "SentenceTransformer"]}
               links={[
                 { label: "Code available upon request", url: "#contact" },
                 { label: "Paper", url: "/ClaimCheckerAiReport.pdf" }
@@ -148,14 +135,25 @@ export default function Home() {
             />
 
             <ProjectItem
+              title="Guardrails: Atomic"
+              description="Architected an AI-powered full-stack formal verification platform in Next.js/TypeScript that iteratively generates mathematically verified code from natural language inputs, winning 1st place at an AI Agent Hackathon. Engineered a YAML-to-Z3 conversion pipeline with automated counterexample generation for program verification."
+              technologies={["TypeScript", "Next.js", "Z3 Prover", "MongoDB", "OpenRouter"]}
+              links={[
+                { label: "GitHub", url: "https://github.com/smyansengupta/guardrails-atomic" },
+                { label: "Devpost", url: "https://devpost.com/software/ai-llm-chatgpt-blockchain-machine-learning" }
+              ]}
+              achievement="1st Place - 2025 AI Agent Hackathon"
+            />
+            
+            <ProjectItem
               title="OpenLegislation"
-              description="Developed a web application to make current Congress bills more accessible and understandable for common users, using the OpenAI API for vector search and simplification."
-              technologies={["React", "TailwindCSS", "Congress.gov API", "OpenAI API"]}
+              description="Built a web application that simplifies congressional legislation for general audiences, enabling users to search, read, and understand active bills without legal expertise, winning 1st place at the HackHarvard 2024 on the Open Data Track. Implemented semantic search using OpenAI embeddings to surface relevant bills from natural language queries, and integrated GPT-based summarization to translate legal language into plain English."
+              technologies={["React", "TailwindCSS", "OpenAI API"]}
               links={[
                 { label: "GitHub", url: "https://github.com/ryankamiri/OpenLegislation" },
                 { label: "Devpost", url: "https://devpost.com/software/openlegislation" }
               ]}
-              achievement="1st Place HackHarvard 2024 - Open Data Track"
+              achievement="1st Place - HackHarvard 2024 Open Data Track"
             />
 
             <ProjectItem
@@ -220,7 +218,7 @@ export default function Home() {
             </p>
             <div className="flex items-center space-x-6">
               <a 
-                href="/resume.pdf" 
+                href="/Smyan_Sengupta_Resume_2026.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-medium text-white hover:bg-white/8 hover:scale-105 hover:-translate-y-0.5 transition-all duration-200 shadow-lg hover:shadow-xl"
