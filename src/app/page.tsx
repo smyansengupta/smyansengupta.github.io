@@ -34,7 +34,6 @@ export default function Home() {
                 </a>
                 , passionate about building software and solving problems.
               </p>
-              {/* Removed in-hero anchor; replaced by floating button */}
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
