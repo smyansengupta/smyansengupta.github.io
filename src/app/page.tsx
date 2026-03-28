@@ -10,12 +10,9 @@ import MobileNavigation from "@/components/MobileNavigation";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
       <MobileNavigation />
 
-      {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 pt-24">
-        {/* Hero Section */}
         <section className="min-h-[calc(100vh-6rem)] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -50,11 +47,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience Section */}
         <section id="experience" className="py-16">
           <h2 className="section-title">Experience</h2>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-700"></div>
             
             <div className="space-y-12">
@@ -119,7 +114,6 @@ export default function Home() {
 
         <ToolsSection />
 
-        {/* Projects Section */}
         <section id="projects" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Projects</h2>
           <div className="space-y-6">
@@ -196,7 +190,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Contact</h2>
           <div className="max-w-2xl mx-auto">
@@ -208,7 +201,6 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-gray-800 mt-20">
         <div className="max-w-4xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
