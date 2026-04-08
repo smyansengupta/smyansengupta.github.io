@@ -29,7 +29,10 @@ export default function Home() {
                 >
                   Northeastern University
                 </a>
-                , passionate about building software and solving problems.
+                . I'm highly driven by the applications of AI and ML to make a real-world impact.
+              </p>
+              <p>
+                I have comprehensive experience with Python, including NumPy, Pandas, Scikit-learn, XGBoost, Keras, and PyTorch. I have also worked extensively with Java, React/Next.js, Flutter, and SQL. I strive to keep picking up new skills every day and improving upon the ones I already have. In my free time, I enjoy traveling, plane spotting, hitting the gym, and going for bike rides. Feel free to <a href="#contact" className="text-white hover:text-gray-300 transition-colors">reach out</a> if you'd like to connect or collaborate!
               </p>
             </div>
             <div className="flex justify-center lg:justify-end">
