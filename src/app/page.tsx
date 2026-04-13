@@ -81,6 +81,18 @@ export default function Home() {
               />
 
               <ExperienceItem
+                title="Founding Member and Vice Chair"
+                company="Northeastern Association for Computing Machinery"
+                location="Boston, MA"
+                duration="September 2024 - Present"
+                responsibilities={[
+                  "ACM at Northeastern aims to make Computer Science opportunities more accessible to students across Northeastern. The startup branch empowers local startups, and currently has a team of student engineers under AIR Health.",
+                  "Directed the planning and execution of two large-scale 24-hour hackathons with 40+ attendees, coordinating budgeting, sponsorships, judging, workshops, and cross-club collaborations across 6+ student organizations and 3 local startups",
+                  "Facilitated communications between student software engineers and local startups to develop impactful real-world products"
+                ]}
+              />
+
+              <ExperienceItem
                 title="Director of Operations"
                 company="Northeastern Claude Builder Club"
                 location="Boston, MA"
@@ -92,23 +104,12 @@ export default function Home() {
               />
 
               <ExperienceItem
-                title="Founding Member and Vice Chair"
-                company="Northeastern Association for Computing Machinery"
-                location="Boston, MA"
-                duration="September 2024 - Present"
-                responsibilities={[
-                  "Directed the planning and execution of two large-scale 24-hour hackathons with 40+ attendees, coordinating budgeting, sponsorships, judging, workshops, and cross-club collaborations across 6+ student organizations and 3 local startups",
-                  "Facilitated communications between student software engineers and local startups to develop impactful real-world products"
-                ]}
-              />
-
-              <ExperienceItem
                 title="Co-Founder and Vice President"
                 company="MedCS Lab"
                 location="Boston, MA"
                 duration="May 2025 - Present"
                 responsibilities={[
-                  "Spearheaded an initiative to establish an interdisciplinary undergraduate research group focused on the intersection of computer science, data science, and the life sciences, facilitating communication between members and advisors"
+                  "MedCS Lab is Northeastern\'s first student-run interdisciplinary lab at the intersection of computer science, data science, and the life sciences. As undergraduates, we noticed that it\'s often difficult to find research opportunities. Our mission is to conduct transformative research at this intersection, while making opportunities more accessible to all undergraduate students. Currently operating under the Undergraduate Research Club with two projects soon to launch."
                 ]}
               />
             </div>
