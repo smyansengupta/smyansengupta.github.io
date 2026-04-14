@@ -16,7 +16,7 @@ export default function ScrollDownButton() {
   }, []);
 
   const handleClick = () => {
-    const next = document.querySelector("#experience");
+    const next = document.querySelector("#projects");
     if (next) {
       next.scrollIntoView({ behavior: "smooth", block: "start" });
     }
