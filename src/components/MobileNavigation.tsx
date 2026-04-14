@@ -23,9 +23,9 @@ export default function MobileNavigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
+            <a href="#projects" className="nav-link">Projects</a>
             <a href="#experience" className="nav-link">Experience</a>
             <a href="#tools" className="nav-link">Tools</a>
-            <a href="#projects" className="nav-link">Projects</a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href="/Smyan_Sengupta_Resume_2026.pdf" className="nav-link">Resume</a>
             <a href="https://github.com/smyansengupta" className="nav-link">GitHub</a>

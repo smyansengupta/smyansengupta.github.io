@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-16 border-t border-gray-800">
+        <section id="projects" className="py-16">
           <h2 className="section-title">Projects</h2>
           <div className="space-y-6">
             <ProjectItem
@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="py-16">
+        <section id="experience" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Experience</h2>
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-700"></div>
