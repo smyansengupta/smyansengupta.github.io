@@ -50,74 +50,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="py-16">
-          <h2 className="section-title">Experience</h2>
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-700"></div>
-            
-            <div className="space-y-12">
-              <ExperienceItem
-                title="Machine Learning Engineering Co-op"
-                company="Pfizer"
-                location="Andover, MA"
-                duration="July - December 2025"
-                responsibilities={[
-                  "Engineered a spaCy-based Natural Language Processing (NLP) chat assistant with a custom Named Entity Recognition (NER) pipeline from scratch, providing automated insights on experimental data, process documentation, and model optimization strategies for workflows across 5 distinct manufacturing processes",
-                  "Developed, automated, and deployed a data cleaning and predictive modeling pipeline using XGBoost, Random Forest, and SVR on 9+ time-series lab datasets (1,000+ datapoints each) for an $11 billion polysaccharide data analysis project",
-                  "Implemented SHAP explainability analysis and EconML causal inference to identify highest-impact factors across datasets, ensuring model interpretability and consistency",
-                  "Researched and implemented MLflow experiment tracking and Data Version Control (DVC) for reproducible ML workflows; presented proof-of-concept to modeling teams across 4 sites"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Teaching Assistant – Foundations of Data Science"
-                company="Khoury College of Computer Sciences"
-                location="Boston, MA"
-                duration="September 2024 - April 2025"
-                responsibilities={[
-                  "Facilitated 6+ office hours per week, directed project meetings, and proctored labs/exams to assist students with assignments and aid them in understanding data analysis, linear algebra, statistics, and machine learning concepts",
-                  "Graded 90+ assignments per week, providing useful feedback"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Founding Member and Vice Chair"
-                company="Northeastern Association for Computing Machinery"
-                location="Boston, MA"
-                duration="September 2024 - Present"
-                responsibilities={[
-                  "ACM at Northeastern aims to make Computer Science opportunities more accessible to students across Northeastern. The startup branch empowers local startups, and currently has a team of student engineers under AIR Health.",
-                  "Directed the planning and execution of two large-scale 24-hour hackathons with 40+ attendees, coordinating budgeting, sponsorships, judging, workshops, and cross-club collaborations across 6+ student organizations and 3 local startups",
-                  "Facilitated communications between student software engineers and local startups to develop impactful real-world products"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Director of Operations"
-                company="Northeastern Claude Builder Club"
-                location="Boston, MA"
-                duration="August 2025 - Present"
-                responsibilities={[
-                  "Secured Anthropic as a sponsor for two large-scale 24-hour hackathons, negotiated Claude API credit allocations for winners",
-                  "Coordinated demos and workshops with Claude Student Ambassadors and student developers to drive adoption and showcase capabilities across the Northeastern developer community"
-                ]}
-              />
-
-              <ExperienceItem
-                title="Co-Founder and Vice President"
-                company="MedCS Lab"
-                location="Boston, MA"
-                duration="May 2025 - Present"
-                responsibilities={[
-                  "MedCS Lab is Northeastern\'s first student-run interdisciplinary lab at the intersection of computer science, data science, and the life sciences. As undergraduates, we noticed that it\'s often difficult to find research opportunities. Our mission is to conduct transformative research at this intersection, while making opportunities more accessible to all undergraduate students. Currently operating under the Undergraduate Research Club with two projects soon to launch."
-                ]}
-              />
-            </div>
-          </div>
-        </section>
-
-        <ToolsSection />
-
         <section id="projects" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Projects</h2>
           <div className="space-y-6">
@@ -193,6 +125,74 @@ export default function Home() {
             />
           </div>
         </section>
+
+        <section id="experience" className="py-16">
+          <h2 className="section-title">Experience</h2>
+          <div className="relative">
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-700"></div>
+            
+            <div className="space-y-12">
+              <ExperienceItem
+                title="Machine Learning Engineering Co-op"
+                company="Pfizer"
+                location="Andover, MA"
+                duration="July - December 2025"
+                responsibilities={[
+                  "Engineered a spaCy-based Natural Language Processing (NLP) chat assistant with a custom Named Entity Recognition (NER) pipeline from scratch, providing automated insights on experimental data, process documentation, and model optimization strategies for workflows across 5 distinct manufacturing processes",
+                  "Developed, automated, and deployed a data cleaning and predictive modeling pipeline using XGBoost, Random Forest, and SVR on 9+ time-series lab datasets (1,000+ datapoints each) for an $11 billion polysaccharide data analysis project",
+                  "Implemented SHAP explainability analysis and EconML causal inference to identify highest-impact factors across datasets, ensuring model interpretability and consistency",
+                  "Researched and implemented MLflow experiment tracking and Data Version Control (DVC) for reproducible ML workflows; presented proof-of-concept to modeling teams across 4 sites"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Teaching Assistant – Foundations of Data Science"
+                company="Khoury College of Computer Sciences"
+                location="Boston, MA"
+                duration="September 2024 - April 2025"
+                responsibilities={[
+                  "Facilitated 6+ office hours per week, directed project meetings, and proctored labs/exams to assist students with assignments and aid them in understanding data analysis, linear algebra, statistics, and machine learning concepts",
+                  "Graded 90+ assignments per week, providing useful feedback"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Founding Member and Vice Chair"
+                company="Northeastern Association for Computing Machinery"
+                location="Boston, MA"
+                duration="September 2024 - Present"
+                responsibilities={[
+                  "ACM at Northeastern aims to make Computer Science opportunities more accessible to students across Northeastern. The startup branch empowers local startups, and currently has a team of student engineers under AIR Health.",
+                  "Directed the planning and execution of two large-scale 24-hour hackathons with 40+ attendees, coordinating budgeting, sponsorships, judging, workshops, and cross-club collaborations across 6+ student organizations and 3 local startups",
+                  "Facilitated communications between student software engineers and local startups to develop impactful real-world products"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Director of Operations"
+                company="Northeastern Claude Builder Club"
+                location="Boston, MA"
+                duration="August 2025 - Present"
+                responsibilities={[
+                  "Secured Anthropic as a sponsor for two large-scale 24-hour hackathons, negotiated Claude API credit allocations for winners",
+                  "Coordinated demos and workshops with Claude Student Ambassadors and student developers to drive adoption and showcase capabilities across the Northeastern developer community"
+                ]}
+              />
+
+              <ExperienceItem
+                title="Co-Founder and Vice President"
+                company="MedCS Lab"
+                location="Boston, MA"
+                duration="May 2025 - Present"
+                responsibilities={[
+                  "MedCS Lab is Northeastern\'s first student-run interdisciplinary lab at the intersection of computer science, data science, and the life sciences. As undergraduates, we noticed that it\'s often difficult to find research opportunities. Our mission is to conduct transformative research at this intersection, while making opportunities more accessible to all undergraduate students. Currently operating under the Undergraduate Research Club with two projects soon to launch."
+                ]}
+              />
+            </div>
+          </div>
+        </section>
+
+        <ToolsSection />
 
         <section id="contact" className="py-16 border-t border-gray-800">
           <h2 className="section-title">Contact</h2>

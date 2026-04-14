@@ -43,6 +43,7 @@ export default function ToolsSection() {
             {/* First set of tools */}
             {tools.map((tool, index) => (
               <div key={`first-${index}`} className="marquee-item">
+                <div>
                 <Image 
                   src={tool.icon} 
                   alt={tool.alt} 
@@ -51,11 +52,14 @@ export default function ToolsSection() {
                   height={24}
                   style={tool.filter ? {filter: tool.filter} : undefined}
                 />
+                <span className="text-xs text-gray-400 mt-1"><center>{tool.name}</center></span>
+                </div>
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
             {tools.map((tool, index) => (
               <div key={`second-${index}`} className="marquee-item">
+                <div>
                 <Image 
                   src={tool.icon} 
                   alt={tool.alt} 
@@ -64,6 +68,8 @@ export default function ToolsSection() {
                   height={24}
                   style={tool.filter ? {filter: tool.filter} : undefined}
                 />
+                <span className="text-xs text-gray-400 mt-1"><center>{tool.name}</center></span>
+                </div>
               </div>
             ))}
           </div>
