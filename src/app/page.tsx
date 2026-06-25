@@ -19,6 +19,9 @@ export default function Home() {
               <h1 className="hero-title">
                 Hi, I&apos;m <span style={{ color: '#3b82f6' }}>Smyan</span>
               </h1>
+              <p className="hero-subtitle">
+                Full stack developer, AI engineer, and 4th year Computer Science student at Northeastern University.
+              </p>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
@@ -39,7 +42,7 @@ export default function Home() {
           <h2 className="section-title">About Me</h2>
           <div className="space-y-4">
             <p className="text-gray-300 text-lg leading-relaxed">
-              I&apos;m a 3rd year Computer Science student at{" "}
+              I&apos;m a 4th year Computer Science student at{" "}
               <a
                 href="https://www.northeastern.edu/"
                 className="text-white hover:text-gray-300 transition-colors"
