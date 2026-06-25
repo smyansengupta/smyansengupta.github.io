@@ -23,6 +23,7 @@ export default function MobileNavigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
+            <a href="#about" className="nav-link">About</a>
             <a href="#projects" className="nav-link">Projects</a>
             <a href="#experience" className="nav-link">Experience</a>
             <a href="#tools" className="nav-link">Tools</a>
@@ -47,8 +48,15 @@ export default function MobileNavigation() {
         {/* Mobile Dropdown Menu */}
         <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="pt-4 pb-2 space-y-2">
-            <a 
-              href="#experience" 
+            <a
+              href="#about"
+              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
+              onClick={closeMenu}
+            >
+              About
+            </a>
+            <a
+              href="#experience"
               className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
               onClick={closeMenu}
             >

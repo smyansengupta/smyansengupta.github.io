@@ -19,31 +19,12 @@ export default function Home() {
               <h1 className="hero-title">
                 Hi, I&apos;m <span style={{ color: '#3b82f6' }}>Smyan</span>
               </h1>
-              <p className="hero-subtitle">
-                I&apos;m a 3rd year Computer Science student at{" "}
-                <a 
-                  href="https://www.northeastern.edu/" 
-                  className="text-white hover:text-gray-300 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Northeastern University
-                </a>
-                . I&apos;m highly driven by the applications of AI and ML to make a real-world impact, and I&apos;m passionate about using software and AI solutions to help early-stage startups grow.
-
-              </p>
-              <p className="hero-subtitle">
-                I have comprehensive experience with Python, including NumPy, Pandas, Scikit-learn, XGBoost, Keras, and PyTorch. I have also worked extensively with Java, React/Next.js, Flutter, and SQL. I&apos;m currently exploring areas of ML including deep learning and Bayesian models. Check out some of my <a href="#projects" className="text-white hover:text-gray-300 transition-colors">projects</a> below!
-              </p>
-              <p className="hero-subtitle">
-                In my free time, I enjoy traveling, plane spotting, hitting the gym, and going for bike rides. Feel free to <a href="#contact" className="text-white hover:text-gray-300 transition-colors">reach out</a> if you&apos;d like to connect or collaborate!
-              </p>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <Image 
-                  src="/pfp.jpeg" 
-                  alt="Smyan Sengupta" 
+                <Image
+                  src="/pfp.jpeg"
+                  alt="Smyan Sengupta"
                   width={256}
                   height={256}
                   className="w-64 h-64 profile-picture rounded-full object-cover shadow-2xl"
@@ -51,6 +32,30 @@ export default function Home() {
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 status-indicator rounded-full"></div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="about" className="py-16 border-t border-gray-800">
+          <h2 className="section-title">About Me</h2>
+          <div className="space-y-4">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              I&apos;m a 3rd year Computer Science student at{" "}
+              <a
+                href="https://www.northeastern.edu/"
+                className="text-white hover:text-gray-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Northeastern University
+              </a>
+              . I&apos;m highly driven by the applications of AI and ML to make a real-world impact, and I&apos;m passionate about using software and AI solutions to help early-stage startups grow.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              I have comprehensive experience with Python, including NumPy, Pandas, Scikit-learn, XGBoost, Keras, and PyTorch. I have also worked extensively with Java, React/Next.js, Flutter, and SQL. I&apos;m currently exploring areas of ML including deep learning and Bayesian models. Check out some of my <a href="#projects" className="text-white hover:text-gray-300 transition-colors">projects</a> below!
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              In my free time, I enjoy traveling, plane spotting, hitting the gym, and going for bike rides. Feel free to <a href="#contact" className="text-white hover:text-gray-300 transition-colors">reach out</a> if you&apos;d like to connect or collaborate!
+            </p>
           </div>
         </section>
 
