@@ -27,11 +27,10 @@ export default function ScrollDownButton() {
       type="button"
       onClick={handleClick}
       aria-label="Scroll to next section"
-      className={`fixed left-1/2 -translate-x-1/2 bottom-6 z-40 rounded-full border border-gray-700 bg-black/70 backdrop-blur px-5 py-3 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:bg-black/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-600 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
-      }`}
+      className={`corner-btn corner-btn--cue ${isVisible ? "is-visible" : ""}`}
     >
-      ↓
+      <span className="corner-arrow">↓</span>
+      <span className="corner-label">Scroll</span>
     </button>
   );
 }
