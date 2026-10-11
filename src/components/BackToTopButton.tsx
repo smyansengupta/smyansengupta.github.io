@@ -25,11 +25,10 @@ export default function BackToTopButton() {
       type="button"
       onClick={handleClick}
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-50 rounded-full border border-gray-700 bg-black/70 backdrop-blur px-4 py-3 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:bg-black/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-600 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-      }`}
+      className={`corner-btn ${isVisible ? "is-visible" : ""}`}
     >
-      ↑
+      <span className="corner-arrow">↑</span>
+      <span className="corner-label">Top</span>
     </button>
   );
 }

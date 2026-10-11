@@ -1,6 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const sections = [
+  { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#tools', label: 'Tools' },
+  { href: '#contact', label: 'Contact' },
+];
+
+const externalLinks = [
+  { href: '/Smyan_Sengupta_Resume_2026.pdf', label: 'Resume' },
+  { href: 'https://github.com/smyansengupta', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/smyan-sengupta/', label: 'LinkedIn' },
+];
 
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,79 +27,87 @@ export default function MobileNavigation() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-      <div className="max-w-4xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold">
-            Smyan Sengupta
+    <>
+      <nav className="masthead">
+        <div className="wrap masthead-inner">
+          <a href="#" className="brand" onClick={closeMenu}>
+            Smyan Sengupta<span className="brand-dot">.</span>
           </a>
-          
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#experience" className="nav-link">Experience</a>
-            <a href="#tools" className="nav-link">Tools</a>
-            <a href="#contact" className="nav-link">Contact</a>
-            <a href="/Smyan_Sengupta_Resume_2026.pdf" className="nav-link">Resume</a>
-            <a href="https://github.com/smyansengupta" className="nav-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/smyan-sengupta/" className="nav-link">LinkedIn</a>
+          <div className="nav-links">
+            {sections.map((section, index) => (
+              <a key={section.href} href={section.href} className="nav-link">
+                <span className="nav-num">0{index + 1}</span>
+                {section.label}
+              </a>
+            ))}
+            <span className="nav-sep" aria-hidden="true" />
+            {externalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+                <span className="nav-ext">↗</span>
+              </a>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1"
+            className="menu-btn"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+            {isOpen ? 'Close' : 'Menu'}
           </button>
         </div>
+        <span className="read-progress" aria-hidden="true" />
+      </nav>
 
-        {/* Mobile Dropdown Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="pt-4 pb-2 space-y-2">
-            <a
-              href="#about"
-              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
-              onClick={closeMenu}
-            >
-              About
-            </a>
-            <a
-              href="#experience"
-              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
-              onClick={closeMenu}
-            >
-              Experience
-            </a>
-            <a 
-              href="#tools" 
-              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
-              onClick={closeMenu}
-            >
-              Tools
-            </a>
-            <a 
-              href="#projects" 
-              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
-              onClick={closeMenu}
-            >
-              Projects
-            </a>
-            <a 
-              href="#contact" 
-              className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
-              onClick={closeMenu}
-            >
-              Contact
-            </a>
+      {/* Mobile Dropdown Menu */}
+      <div id="mobile-menu" className={`mobile-menu ${isOpen ? 'is-open' : ''}`} aria-hidden={!isOpen}>
+        <div className="wrap">
+          <ol className="mobile-menu-sections">
+            {sections.map((section, index) => (
+              <li key={section.href} style={{ '--i': index } as React.CSSProperties}>
+                <a href={section.href} onClick={closeMenu} tabIndex={isOpen ? 0 : -1}>
+                  <span className="nav-num">0{index + 1}</span>
+                  {section.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+          <div className="mobile-menu-external">
+            {externalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={isOpen ? 0 : -1}
+              >
+                {link.label} <span className="arrow">↗</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
